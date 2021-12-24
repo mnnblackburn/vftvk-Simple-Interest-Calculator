@@ -5,13 +5,23 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
+    <!-- Sets the initial range of slider upon page load -->
     <body onload="setRate()">
         <div class ="maindiv">
         <h1>Simple Interest Calculator</h1>
 
+                <!-- Allows user to insert a number and sends an alert if the number is less than 0 -->
         Amount <input type="number"  id="principal" onchange="principalValidate()">  <br/>
+            
+                            <!-- Allows user to select a range from 1 to 20 for interest rate -->
         Rate <input type="range" onchange="updateRate()" id="rate" min="minval" max="maxval" value ="default_val" step="step"> 
+            
+                            <!-- Shows the change in interest rate as you move the slider -->
+
         <span id="rate_val">10.25% </span> <br/>
+            
+                            <!-- Allows the user to select 1 to 10 years of interest to calculate -->
+
         No. of Years <select id="years">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -25,8 +35,13 @@
             <option value="10">10</option>
            
         </select>  <br/>
-        Interest : <span id="result"></span><br>
+            <br/>
+            
+                                        <!-- Shows the resulting interest rate from user inputs -->
 
+        Interest : <span id="result"></span><br>
+            <br/>
+            <br/>
         <button onclick="compute()">Compute Interest</button>
         <span id="result"></span>
         </div>
