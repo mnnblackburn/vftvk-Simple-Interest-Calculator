@@ -31,7 +31,7 @@ function principalValidate()
         var rate = document.getElementById("rate").value
         var interest = (principal * years * rate) /100
         var year = new Date().getFullYear()+parseInt(years);
-        document.getElementById("result").innerHTML="If you deposit \<mark class=\"mark_compute\"\>"+principal+"\</mark\>,\<br\>at an interest rate of \<mark class=mark_compute\>"+rate+"%\</mark\>\<br\>You will receive an amount of \<mark class=mark_compute\>"+interest+"\</mark\>,\<br\>in the year \<mark class=mark_compute\>"+year+"\</mark\>\<br\>"
+        document.getElementById("result").innerHTML="If you deposit \<mark class=\"mark_compute\"\>$"+principal+"\</mark\>,\<br\>at an interest rate of \<mark class=mark_compute\>"+rate+"%\</mark\>\<br\>You will receive an amount of \<mark class=mark_compute\>$"+interest+"\</mark\>,\<br\>in the year \<mark class=mark_compute\>"+year+"\</mark\>\<br\>"
      
     }
       }  
