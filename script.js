@@ -1,5 +1,7 @@
      
-     function setRate()
+    
+//sets the initial range values upon loading the page
+function setRate()
      {
      this.document.getElementById("rate").min = 1
     this.document.getElementById("rate").max = 20
@@ -9,19 +11,25 @@
         document.getElementById("rate_val").innerText=rate_init
         
         }
+
+//updates the range value seen on the side when you use slider
     function updateRate() 
     {  
         this.rateval = document.getElementById("rate").value
         document.getElementById("rate_val").innerText=rateval
     }
    
+//creates an alert if an amount is entered that is not greater than or equal to $0.01
 function principalValidate()
-   {if (document.getElementById("principal").value < 1) {alert("Enter a positive number");
+   {if (document.getElementById("principal").value <= 0) {alert("Enter a positive number");
     document.getElementById("principal").focus()
     return (false)
     }
     else return(true)
 }
+
+//calculates the amount of interest for a given time frame if a valid amount is entered
+
     function compute()
     {
     if (principalValidate()===true){
